@@ -18,6 +18,22 @@ app.get("/api/v1/books", (req, res) => {
   });
 });
 
+
+app.post("/api/v1/books", (req, res) => {
+  const new_id = books[books.length - 1].id + 1;
+  const new_book = Object.assign({ id: new_id }, req.body);
+
+  books.push(new_book);
+  fs.writeFile(`${__dirname}/books`, JSON.stringify(books), (err) => {
+    res.status(201).json({
+      status: "success",
+      data: {
+        book: new_book,
+      },
+    });
+  });
+});
+
 const port = 3000;
 
 app.listen(port, () => {
