@@ -85,6 +85,37 @@ app.patch("/api/v1/books/:id", (req, res) => {
   });
 });
 
+
+app.delete("/api/v1/books/:id", (req, res) => {
+  const id = req.params.id * 1;
+  
+  if (!is_Id_validate(id)) {
+    return res.status(404).json({
+      status: "fail",
+      message: "Book with this ID not found"
+    });
+  }
+
+  const book_index = books.findIndex((el) => el.id === id);
+books.splice(book_index, 1);
+
+  fs.writeFile(`${__dirname}/books.json`, JSON.stringify(books), (err) => {
+    if (err) {
+      return res.status(500).json({
+        status: "error",
+        message: "Could not delete the book from database"
+      });
+    }
+
+    res.status(204).json({
+      status: "success",
+      data: {
+        book: null
+      }
+    });
+  });
+});
+
 const port = 3000;
 
 app.listen(port, () => {
