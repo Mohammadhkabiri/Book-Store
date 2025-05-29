@@ -1,0 +1,107 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "first_name": "Ali",
+      "last_name": "Rezaei",
+      "password": "hashed_password_1",
+      "birth_date": "1990-05-12",
+      "phone": "09123456789",
+      "email": "ali.rezaei@example.com",
+      "role": "user",
+      "purchase_history": [1, 2]
+    },
+    {
+      "id": 2,
+      "first_name": "Sara",
+      "last_name": "Moradi",
+      "password": "hashed_password_2",
+      "birth_date": "1992-11-23",
+      "phone": "09121234567",
+      "email": "sara.moradi@example.com",
+      "role": "user",
+      "purchase_history": []
+    },
+    {
+      "id": 3,
+      "first_name": "Reza",
+      "last_name": "Karimi",
+      "password": "hashed_password_3",
+      "birth_date": "1988-02-01",
+      "phone": "09352223344",
+      "email": "reza.karimi@example.com",
+      "role": "user",
+      "purchase_history": [3]
+    },
+    {
+      "id": 4,
+      "first_name": "Neda",
+      "last_name": "Shahbazi",
+      "password": "hashed_password_4",
+      "birth_date": "1995-07-18",
+      "phone": "09211112222",
+      "email": "neda.shahbazi@example.com",
+      "role": "user",
+      "purchase_history": []
+    },
+    {
+      "id": 5,
+      "first_name": "Omid",
+      "last_name": "Ebrahimi",
+      "password": "hashed_password_5",
+      "birth_date": "1993-10-30",
+      "phone": "09350001122",
+      "email": "omid.ebrahimi@example.com",
+      "role": "user",
+      "purchase_history": [4]
+    },
+    {
+      "id": 6,
+      "first_name": "Mina",
+      "last_name": "Azimi",
+      "password": "hashed_password_6",
+      "birth_date": "1991-06-14",
+      "phone": "09126667788",
+      "email": "mina.azimi@example.com",
+      "role": "user",
+      "purchase_history": []
+    },
+    {
+      "id": 7,
+      "first_name": "Hossein",
+      "last_name": "Rahmani",
+      "password": "hashed_password_7",
+      "birth_date": "1987-03-25",
+      "phone": "09128889900",
+      "email": "hossein.rahmani@example.com",
+      "role": "user",
+      "purchase_history": [5, 6]
+    },
+    {
+      "id": 8,
+      "first_name": "Elham",
+      "last_name": "Jafari",
+      "password": "hashed_password_8",
+      "birth_date": "1994-09-08",
+      "phone": "09331114455",
+      "email": "elham.jafari@example.com",
+      "role": "user",
+      "purchase_history": []
+    },
+    {
+      "id": 9,
+      "first_name": "Admin",
+      "last_name": "One",
+      "password": "admin_hashed_1",
+      "role": "admin"
+
+    },
+    {
+      "id": 10,
+      "first_name": "Admin",
+      "last_name": "Two",
+      "role": "admin"
+
+    }
+  ]
+}
