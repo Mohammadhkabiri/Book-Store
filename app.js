@@ -56,6 +56,35 @@ const book  = books.find(el => el.id === id);
   });
 });
 
+
+
+app.patch("/api/v1/books/:id", (req, res) => {
+  const id = req.params.id * 1;
+  if (!is_Id_validate(id)) {
+    return res.status(404).json({
+      status: "fail",
+      message: "invalid ID",
+    });
+  }
+
+  const book_index = books.findIndex((el) => el.id === id);
+  books[book_index] = { ...books[book_index], ...req.body };
+  fs.writeFile(`${__dirname}/books.json`,JSON.stringify(books), (err) => {
+    if (err) {
+      return res.status(500).json({
+        status: "fail",
+        message: "fail to update book",
+      });
+    }
+    res.status(200).json({
+      status: "success",
+      data: {
+        book: books[book_index],
+      },
+    });
+  });
+});
+
 const port = 3000;
 
 app.listen(port, () => {
