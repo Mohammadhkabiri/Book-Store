@@ -38,6 +38,13 @@ app.post("/api/v1/books", (req, res) => {
 app.get("/api/v1/books/:id", (req, res) => {
   const id = req.params.id * 1;
 
+   if (id > books.length || id <= 0) {
+    return res.status(404).json({
+      status: "fail",
+      message: "invalid ID",
+    });
+  }
+
 const book  = books.find(el => el.id === id);
 
   console.log(req.params);
