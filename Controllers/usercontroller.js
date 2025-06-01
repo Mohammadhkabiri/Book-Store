@@ -1,5 +1,5 @@
 const fs = require("fs");
-const User = require("./usermodel");
+const User = require("./../models/usermodel");
 
 exports.get_all_user = async (req, res) => {
   try {
