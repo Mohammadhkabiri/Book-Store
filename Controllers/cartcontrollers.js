@@ -1,5 +1,5 @@
-const Cart = require("./Cart.model");
-const Book = require("./bookmodel");
+const Cart = require("./../models/cartmodel");
+const Book = require("./../models/bookmodel");
 
 exports.getCart = async (req, res) => {
   try {
