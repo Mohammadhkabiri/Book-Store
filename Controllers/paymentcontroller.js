@@ -1,6 +1,6 @@
-const Payment = require("./Payment.model");
-const Cart = require("./cartmodel");
-const Book = require("./bookmodel");
+const Payment = require("./../models/paymentmodel");
+const Cart = require("./../models/cartmodel");
+const Book = require("./../models/bookmodel");
 
 exports.processPayment = async (req, res) => {
   try {
