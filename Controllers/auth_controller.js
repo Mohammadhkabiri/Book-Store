@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const User = require("./usermodel");
 const jwt = require("jsonwebtoken");
 const { token } = require("morgan");
-const { use } = require("./UserRoutes");
+const { use } = require("./../Routers/userRouter");
 
 exports.protect = async (req, res, next) => {
   let token;
