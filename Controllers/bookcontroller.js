@@ -1,5 +1,5 @@
 const fs = require("fs");
-const Book = require("./Book.model");
+const Book = require("./../models/bookmodel");
 
 exports.check_body = (req, res, next) => {
   if (!req.body.title || !req.body.price) {
